@@ -1,0 +1,78 @@
+*{
+    background-color: rgb(16,155,215);
+}
+
+a{
+    color: rgb(219, 244, 255);
+    font-family: 'Montserrat', sans-serif;
+    font-size:100px;
+    text-decoration: none;
+}
+
+.maintitle{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.otherblock{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    width:60%;
+}
+
+#wrapper1 {
+	/* position: absolute; */
+  margin-right: 150px;
+	animation:pulse 1s infinite;
+}
+
+#wrapper2 {
+	/* position: absolute; */
+  margin-left: 50px;
+  margin-right: 80px;
+	animation:pulse 1s infinite;
+}
+
+
+
+
+#pulsingheart { 
+  position: relative; 
+  width: 100px; 
+  height: 90px;
+} 
+
+#pulsingheart:before, #pulsingheart:after { 
+  position: absolute; 
+  content: ""; 
+  left: 100px; 
+  top: 0; 
+  width: 100px; 
+  height: 160px; 
+  background: #aa0000; 
+  border-radius: 50px 50px 0 0; 
+  transform: rotate(-45deg);  
+  transform-origin: 0 100%;
+  animation:pulsecolor 1s infinite;
+} 
+
+#pulsingheart:after { 
+  left: 0; 
+  transform: rotate(45deg); 
+  transform-origin :100% 100%;
+  animation:pulsecolor 1s infinite;
+}
+
+@keyframes pulse {
+	10% {transform: scale(1.1)}
+}
+
+@keyframes pulsecolor {
+  10% {background: #dd0000}
+}
+
+/* ---- reset ---- */ body{ margin:0; font:normal 75% Arial, Helvetica, sans-serif; } canvas{ display: block; vertical-align: bottom; } /* ---- particles.js container ---- */ #particles-js{ position:absolute; width: 100%; height: 100%; background-color: rgb(16,155,215);; background-image: url(""); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; } /* ---- stats.js ---- */ .count-particles{ background: #000022; position: absolute; top: 48px; left: 0; width: 80px; color: #13E8E9; font-size: .8em; text-align: left; text-indent: 4px; line-height: 14px; padding-bottom: 2px; font-family: Helvetica, Arial, sans-serif; font-weight: bold; } .js-count-particles{ font-size: 1.1em; } #stats, .count-particles{ -webkit-user-select: none; margin-top: 5px; margin-left: 5px; } #stats{ border-radius: 3px 3px 0 0; overflow: hidden; } .count-particles{ border-radius: 0 0 3px 3px; }
